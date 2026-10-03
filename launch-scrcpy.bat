@@ -20,20 +20,28 @@ echo.
 
 echo [1/2] Checking connection...
 "%ADB%" disconnect >nul 2>&1
-"%ADB%" -d tcpip 5555 >nul 2>&1
 
 echo [2/2] Launching Screen Mirror...
-"%SCRCPY_DIR%\scrcpy.exe" -d --no-audio --video-codec=h264 --stay-awake --window-title="MirrorKing - Samsung Galaxy S22"
-if %errorlevel% neq 0 (
+"%SCRCPY_DIR%\scrcpy.exe" -d --no-audio -m 1600 -b 8M --video-codec=h264 --stay-awake --window-title="MirrorKing - Samsung Galaxy S22"
+if %errorlevel% equ 0 (
     echo.
-    echo [ROUTE] USB not active. Connecting over Wireless / Cellular Tunnel...
-    if defined RENDER_URL (
-        powershell -NoProfile -Command "if (-not (Get-Process node -ErrorAction SilentlyContinue)) { Start-Process node -ArgumentList 'pc\server.js --relay %RENDER_URL%' -WorkingDirectory 'e:\SECUREADY\Mirrorking' -WindowStyle Hidden; Start-Sleep -Seconds 1 }"
-    ) else (
-        powershell -NoProfile -Command "if (-not (Get-Process node -ErrorAction SilentlyContinue)) { Start-Process node -ArgumentList 'pc\server.js' -WorkingDirectory 'e:\SECUREADY\Mirrorking' -WindowStyle Hidden; Start-Sleep -Seconds 1 }"
-    )
-    "%ADB%" connect 127.0.0.1:7777 >nul 2>&1
-    "%SCRCPY_DIR%\scrcpy.exe" -s 127.0.0.1:7777 --no-audio --force-adb-forward -m 1600 -b 4M --video-codec=h264 --stay-awake --window-title="MirrorKing - Samsung Galaxy S22 (Wireless/Cellular)"
+    echo [MirrorKing] Mirror closed normally.
+    exit /b 0
+)
+
+echo.
+echo [ROUTE] USB not active. Connecting over Wireless / Cellular Tunnel...
+if defined RENDER_URL (
+    powershell -NoProfile -Command "if (-not (Get-Process node -ErrorAction SilentlyContinue)) { Start-Process node -ArgumentList 'pc\server.js --relay %RENDER_URL%' -WorkingDirectory 'e:\SECUREADY\Mirrorking' -WindowStyle Hidden; Start-Sleep -Seconds 1 }"
+) else (
+    powershell -NoProfile -Command "if (-not (Get-Process node -ErrorAction SilentlyContinue)) { Start-Process node -ArgumentList 'pc\server.js' -WorkingDirectory 'e:\SECUREADY\Mirrorking' -WindowStyle Hidden; Start-Sleep -Seconds 1 }"
+)
+"%ADB%" connect 127.0.0.1:7777 >nul 2>&1
+"%SCRCPY_DIR%\scrcpy.exe" -s 127.0.0.1:7777 --no-audio --force-adb-forward -m 1600 -b 4M --video-codec=h264 --stay-awake --window-title="MirrorKing - Samsung Galaxy S22 (Wireless/Cellular)"
+if %errorlevel% equ 0 (
+    echo.
+    echo [MirrorKing] Mirror closed normally.
+    exit /b 0
 )
 
 echo.
