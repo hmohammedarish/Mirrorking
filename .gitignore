@@ -1,0 +1,24 @@
+# Node dependencies
+node_modules/
+pc/node_modules/
+relay/node_modules/
+
+# Android build outputs & temporary files
+bin/classes/
+bin/classes.dex
+bin/res.zip
+bin/app.aligned.apk
+bin/app.unsigned.apk
+bin/*.idsig
+android/gen/
+
+# Logs & runtime configs
+*.log
+scrcpy.log
+render_url.txt
+
+# OS metadata
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/

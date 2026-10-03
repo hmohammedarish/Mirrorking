@@ -1,0 +1,318 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <linearGradient id="renderCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141a2e"/>
+      <stop offset="100%" stop-color="#0d111e"/>
+    </linearGradient>
+
+    <linearGradient id="renderAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#46e3b7"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="pcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowRender" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4"/>
+    </pattern>
+
+    <marker id="arrowRender" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#46e3b7" />
+    </marker>
+    <marker id="arrowCyan" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+
+  <!-- Title Header -->
+  <g transform="translate(60, 35)">
+    <rect x="0" y="0" width="1080" height="60" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="38" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#f8fafc" letter-spacing="1">
+      MIRRORKING : RENDER.COM CLOUD WEBSOCKET RELAY ARCHITECTURE
+    </text>
+    <rect x="880" y="15" width="175" height="30" rx="15" fill="#46e3b7" fill-opacity="0.2" stroke="#46e3b7" stroke-width="1.2"/>
+    <text x="900" y="35" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#46e3b7">
+      100% FREE TIER READY
+    </text>
+  </g>
+
+  <!-- LEFT: PHONE ON 4G/5G CELLULAR -->
+  <g transform="translate(60, 125)">
+    <rect x="0" y="0" width="310" height="585" rx="16" fill="url(#phoneGrad)" stroke="#38bdf8" stroke-width="2" filter="url(#glowCyan)"/>
+    
+    <rect x="0" y="0" width="310" height="55" rx="16" fill="#0284c7" fill-opacity="0.25"/>
+    <text x="20" y="34" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">
+      GALAXY S22 (CELLULAR)
+    </text>
+    <text x="20" y="49" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#94a3b8">
+      Anywhere on 4G / 5G Mobile Data
+    </text>
+
+    <!-- Component 1 -->
+    <g transform="translate(15, 75)">
+      <rect x="0" y="0" width="280" height="150" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#38bdf8">
+        1. Outbound WSS Client
+      </text>
+      <text x="15" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Initiates WSS to Render on port 443
+      </text>
+      <text x="15" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Bypasses Carrier NAT automatically
+      </text>
+      <text x="15" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Endpoint: /phone
+      </text>
+      <rect x="15" y="105" width="250" height="30" rx="5" fill="#0369a1" fill-opacity="0.3"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#7dd3fc">
+        wss://your-app.onrender.com/phone
+      </text>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(15, 245)">
+      <rect x="0" y="0" width="280" height="150" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#34d399">
+        2. Local adbd Bridge
+      </text>
+      <text x="15" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Loops to local 127.0.0.1:5555
+      </text>
+      <text x="15" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Packages ADB packets inside frames
+      </text>
+      <text x="15" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • No cable needed, completely wireless
+      </text>
+      <rect x="15" y="105" width="250" height="30" rx="5" fill="#065f46" fill-opacity="0.3"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#6ee7b7">
+        Zero USB Dependency
+      </text>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(15, 415)">
+      <rect x="0" y="0" width="280" height="150" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#fbbf24">
+        3. Stealth Engine
+      </text>
+      <text x="15" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • SurfaceControl UID 2000 pipeline
+      </text>
+      <text x="15" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Never triggers Snapchat Alerts
+      </text>
+      <text x="15" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Screen Off Mode (Alt+O) keeps glass cold
+      </text>
+      <rect x="15" y="105" width="250" height="30" rx="5" fill="#78350f" fill-opacity="0.3"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#fde68a">
+        Zero Screen Recording Warnings
+      </text>
+    </g>
+  </g>
+
+  <!-- CENTER: RENDER.COM CLOUD PLATFORM -->
+  <g transform="translate(420, 125)">
+    <rect x="0" y="0" width="360" height="585" rx="16" fill="url(#renderCard)" stroke="#46e3b7" stroke-width="2" filter="url(#glowRender)"/>
+    
+    <rect x="0" y="0" width="360" height="55" rx="16" fill="#46e3b7" fill-opacity="0.2"/>
+    <text x="20" y="34" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#46e3b7">
+      RENDER.COM (CLOUD RELAY)
+    </text>
+    <text x="20" y="49" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#a7f3d0">
+      Free Web Service • Managed HTTPS / WSS
+    </text>
+
+    <!-- Sub 1 -->
+    <g transform="translate(20, 75)">
+      <rect x="0" y="0" width="320" height="150" rx="10" fill="#0b1120" stroke="#334155" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#38bdf8">
+        Architecture &amp; Protocol
+      </text>
+      <text x="15" y="46" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Node.js WebSocket Server (relay/server.js)
+      </text>
+      <text x="15" y="66" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Listens on process.env.PORT
+      </text>
+      <text x="15" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Render TLS Proxy handles Port 443
+      </text>
+      <rect x="15" y="105" width="290" height="30" rx="5" fill="#1e293b"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#93c5fd">
+        Healthcheck: GET /healthz (200 OK)
+      </text>
+    </g>
+
+    <!-- Sub 2 -->
+    <g transform="translate(20, 245)">
+      <rect x="0" y="0" width="320" height="150" rx="10" fill="#0b1120" stroke="#334155" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#46e3b7">
+        Zero-Copy Binary Pipe
+      </text>
+      <text x="15" y="46" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Direct byte stream forwarding
+      </text>
+      <text x="15" y="66" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Ultra low latency (&lt; 25ms server overhead)
+      </text>
+      <text x="15" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Routes /phone data straight to /pc
+      </text>
+      <rect x="15" y="105" width="290" height="30" rx="5" fill="#064e3b" fill-opacity="0.4"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#6ee7b7">
+        Full Bi-directional High-Speed Pipe
+      </text>
+    </g>
+
+    <!-- Sub 3 -->
+    <g transform="translate(20, 415)">
+      <rect x="0" y="0" width="320" height="150" rx="10" fill="#0b1120" stroke="#334155" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#c084fc">
+        Keep-Alive &amp; Anti-Idle
+      </text>
+      <text x="15" y="46" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • 20-second WebSocket ping/pong pulses
+      </text>
+      <text x="15" y="66" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Prevents Render proxy 60s idle drops
+      </text>
+      <text x="15" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
+        • Keeps tunnel permanently open
+      </text>
+      <rect x="15" y="105" width="290" height="30" rx="5" fill="#581c87" fill-opacity="0.3"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#d8b4fe">
+        Permanent Standing Cellular Tunnel
+      </text>
+    </g>
+  </g>
+
+  <!-- RIGHT: USER PC -->
+  <g transform="translate(830, 125)">
+    <rect x="0" y="0" width="310" height="585" rx="16" fill="url(#pcGrad)" stroke="#10b981" stroke-width="2"/>
+    
+    <rect x="0" y="0" width="310" height="55" rx="16" fill="#047857" fill-opacity="0.25"/>
+    <text x="20" y="34" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">
+      YOUR WINDOWS 11 PC
+    </text>
+    <text x="20" y="49" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#a7f3d0">
+      Anywhere • Low Spec (&lt;50MB RAM)
+    </text>
+
+    <!-- Sub 1 -->
+    <g transform="translate(15, 75)">
+      <rect x="0" y="0" width="280" height="150" rx="10" fill="#062e22" stroke="#10b981" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#6ee7b7">
+        1. PC Relay Bridge
+      </text>
+      <text x="15" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Connects to wss://.../pc
+      </text>
+      <text x="15" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Creates virtual ADB on 127.0.0.1:7777
+      </text>
+      <text x="15" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Command: node pc/server.js --relay
+      </text>
+      <rect x="15" y="105" width="250" height="30" rx="5" fill="#047857" fill-opacity="0.4"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#a7f3d0">
+        Binds Local Virtual Port 7777
+      </text>
+    </g>
+
+    <!-- Sub 2 -->
+    <g transform="translate(15, 245)">
+      <rect x="0" y="0" width="280" height="150" rx="10" fill="#062e22" stroke="#34d399" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#34d399">
+        2. Native Scrcpy Client
+      </text>
+      <text x="15" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Connects to 127.0.0.1:7777
+      </text>
+      <text x="15" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • 1080x2336 60fps Direct3D11 window
+      </text>
+      <text x="15" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Physical Keyboard &amp; Mouse
+      </text>
+      <rect x="15" y="105" width="250" height="30" rx="5" fill="#059669" fill-opacity="0.4"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#f0fdf4">
+        Interactive Desktop Experience
+      </text>
+    </g>
+
+    <!-- Sub 3 -->
+    <g transform="translate(15, 415)">
+      <rect x="0" y="0" width="280" height="150" rx="10" fill="#062e22" stroke="#059669" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#6ee7b7">
+        3. 1-Click Launcher
+      </text>
+      <text x="15" y="45" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Double click "MirrorKing" shortcut
+      </text>
+      <text x="15" y="65" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Auto-connects via USB or Render
+      </text>
+      <text x="15" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" fill="#d1fae5">
+        • Reconnects if cellular signal drops
+      </text>
+      <rect x="15" y="105" width="250" height="30" rx="5" fill="#064e3b"/>
+      <text x="25" y="124" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#a7f3d0">
+        Desktop Shortcut Ready
+      </text>
+    </g>
+  </g>
+
+  <!-- CONNECTING FLOW ARROWS -->
+  <!-- Phone -> Render (WSS /phone) -->
+  <path d="M 370, 240 L 420, 240" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowCyan)"/>
+  <text x="365" y="225" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#38bdf8">WSS /phone</text>
+
+  <!-- PC -> Render (WSS /pc) -->
+  <path d="M 830, 240 L 780, 240" fill="none" stroke="#46e3b7" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowRender)"/>
+  <text x="785" y="225" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#46e3b7">WSS /pc</text>
+
+  <!-- Bidirectional Controls (Bottom) -->
+  <path d="M 780, 320 L 830, 320" fill="none" stroke="#10b981" stroke-width="3" marker-end="url(#arrowRender)"/>
+  <text x="785" y="340" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#10b981">ADB PACKETS</text>
+
+  <path d="M 420, 320 L 370, 320" fill="none" stroke="#10b981" stroke-width="3" marker-end="url(#arrowCyan)"/>
+  <text x="375" y="340" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#10b981">TOUCH INJECT</text>
+
+  <!-- Footer Banner -->
+  <g transform="translate(60, 730)">
+    <rect x="0" y="0" width="1080" height="45" rx="8" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="28" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">
+      RENDER.COM BLUEPRINT  •  NODE.JS WEBSOCKET RUNTIME  •  100% FREE TIER COMPLIANT  •  ZERO CARRIER CGNAT RESTRICTIONS
+    </text>
+  </g>
+</svg>

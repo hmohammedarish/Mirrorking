@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10" />
+      <stop offset="100%" stop-color="#141824" />
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="accentGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 800; fill: #f8fafc; }
+    .subtitle { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #94a3b8; }
+    .card-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #38bdf8; }
+    .card-sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #64748b; }
+    .item-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #e2e8f0; }
+    .item-desc { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; fill: #94a3b8; }
+    .badge { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 10px; font-weight: 700; fill: #ffffff; }
+    .pipe-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #34d399; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Grid lines -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+    <line x1="0" y1="700" x2="1200" y2="700" />
+    <line x1="200" y1="0" x2="200" y2="800" />
+    <line x1="400" y1="0" x2="400" y2="800" />
+    <line x1="600" y1="0" x2="600" y2="800" />
+    <line x1="800" y1="0" x2="800" y2="800" />
+    <line x1="1000" y1="0" x2="1000" y2="800" />
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(60, 45)">
+    <circle cx="20" cy="20" r="18" fill="url(#accentBlue)" />
+    <text x="20" y="27" text-anchor="middle" font-size="20">👑</text>
+    <text x="50" y="22" class="title">MirrorKing - Universal Mobile Data Scrcpy Engine</text>
+    <text x="50" y="42" class="subtitle">Architectural Blueprint: Native Display Mirroring (Zero Snapchat Alerts) + Outbound Cellular Tunnel</text>
+  </g>
+
+  <!-- LEFT COLUMN: Android Device -->
+  <g transform="translate(60, 110)">
+    <!-- Device Container -->
+    <rect width="400" height="630" rx="16" fill="url(#blueCard)" stroke="#334155" stroke-width="2" />
+    <rect x="0" y="0" width="400" height="48" rx="16" fill="#1e293b" />
+    <rect x="0" y="32" width="400" height="16" fill="#1e293b" />
+    <text x="24" y="30" class="card-title">📱 Android Phone (Galaxy S22)</text>
+    <text x="290" y="30" class="badge" fill="#ef4444">[Cracked Screen]</text>
+
+    <!-- Sub-Block 1: Low-Level Compositor (Scrcpy Shell Core) -->
+    <g transform="translate(20, 65)">
+      <rect width="360" height="140" rx="10" fill="#0b1329" stroke="#1e3a8a" stroke-width="1.5" />
+      <text x="16" y="26" class="item-title" fill="#38bdf8">1. Low-Level Compositor (scrcpy-server)</text>
+      <text x="16" y="44" class="item-desc">Runs as UID 2000 (Shell) via app_process</text>
+      
+      <rect x="16" y="55" width="328" height="32" rx="6" fill="#172554" />
+      <text x="26" y="75" font-family="sans-serif" font-size="11" fill="#93c5fd">🔒 SurfaceControl / SurfaceFlinger Mirror</text>
+      <text x="240" y="75" class="badge" fill="#10b981">✓ NO Snap Alert</text>
+
+      <rect x="16" y="93" width="328" height="32" rx="6" fill="#172554" />
+      <text x="26" y="113" font-family="sans-serif" font-size="11" fill="#93c5fd">⚡ InputManager (Kernel MotionEvents)</text>
+      <text x="240" y="113" class="badge" fill="#10b981">✓ Native Touch</text>
+    </g>
+
+    <!-- Sub-Block 2: adbd Daemon -->
+    <g transform="translate(20, 220)">
+      <rect width="360" height="90" rx="10" fill="#0b1329" stroke="#334155" stroke-width="1.5" />
+      <text x="16" y="26" class="item-title" fill="#f8fafc">2. Android Debug Bridge Daemon (adbd)</text>
+      <text x="16" y="44" class="item-desc">Listens internally on loopback: 127.0.0.1:5555</text>
+      <rect x="16" y="55" width="328" height="24" rx="4" fill="#1e293b" />
+      <text x="26" y="71" font-family="monospace" font-size="11" fill="#34d399">tcp:5555 (Normally blocked by Carrier NAT)</text>
+    </g>
+
+    <!-- Sub-Block 3: MirrorKing Guardian APK -->
+    <g transform="translate(20, 325)">
+      <rect width="360" height="280" rx="10" fill="#0b1329" stroke="#7c3aed" stroke-width="1.5" />
+      <text x="16" y="26" class="item-title" fill="#c084fc">3. MirrorKing Guardian APK (Persistent)</text>
+      <text x="16" y="44" class="item-desc">The cracked-screen insurance policy</text>
+
+      <!-- Feature 1 -->
+      <g transform="translate(16, 55)">
+        <rect width="328" height="45" rx="6" fill="#2e1065" />
+        <text x="12" y="20" font-family="sans-serif" font-size="11" font-weight="700" fill="#e9d5ff">🔄 Outbound Reverse Tunnel Engine</text>
+        <text x="12" y="36" class="item-desc">Initiates outbound socket to PC, bypassing CGNAT</text>
+      </g>
+
+      <!-- Feature 2 -->
+      <g transform="translate(16, 110)">
+        <rect width="328" height="45" rx="6" fill="#2e1065" />
+        <text x="12" y="20" font-family="sans-serif" font-size="11" font-weight="700" fill="#e9d5ff">🛡 Auto-Boot Receiver (BOOT_COMPLETED)</text>
+        <text x="12" y="36" class="item-desc">Wakes up automatically when phone turns on</text>
+      </g>
+
+      <!-- Feature 3 -->
+      <g transform="translate(16, 165)">
+        <rect width="328" height="45" rx="6" fill="#2e1065" />
+        <text x="12" y="20" font-family="sans-serif" font-size="11" font-weight="700" fill="#e9d5ff">♿ Accessibility Service Lifeline</text>
+        <text x="12" y="36" class="item-desc">Emergency PIN unlock & USB debug revival</text>
+      </g>
+
+      <!-- Feature 4 -->
+      <g transform="translate(16, 220)">
+        <rect width="328" height="45" rx="6" fill="#2e1065" />
+        <text x="12" y="20" font-family="sans-serif" font-size="11" font-weight="700" fill="#e9d5ff">⚡ Whitelisted Battery Optimization</text>
+        <text x="12" y="36" class="item-desc">Samsung One UI never puts the service to sleep</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- MIDDLE COLUMN: Transmission Mediums -->
+  <g transform="translate(500, 150)">
+    <!-- Path 1: USB -->
+    <path d="M 0, 70 L 200, 70" stroke="#38bdf8" stroke-width="4" stroke-dasharray="8 4" />
+    <rect x="40" y="48" width="120" height="24" rx="12" fill="#0369a1" />
+    <text x="100" y="64" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#ffffff">USB (adb reverse)</text>
+
+    <!-- Path 2: Wi-Fi LAN -->
+    <path d="M 0, 180 L 200, 180" stroke="#10b981" stroke-width="4" stroke-dasharray="8 4" />
+    <rect x="40" y="158" width="120" height="24" rx="12" fill="#047857" />
+    <text x="100" y="174" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#ffffff">Wi-Fi (Direct LAN)</text>
+
+    <!-- Path 3: Cellular / WAN -->
+    <path d="M 0, 380 L 200, 380" stroke="#a855f7" stroke-width="5" filter="url(#glow)" />
+    <rect x="25" y="345" width="150" height="50" rx="8" fill="#581c87" stroke="#c084fc" stroke-width="1.5" />
+    <text x="100" y="366" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff">4G / 5G Mobile Data</text>
+    <text x="100" y="384" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e9d5ff">Outbound Tunnel</text>
+    <text x="100" y="415" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#f43f5e">🔥 Bypasses CGNAT!</text>
+  </g>
+
+  <!-- RIGHT COLUMN: Windows 11 PC -->
+  <g transform="translate(740, 110)">
+    <!-- PC Container -->
+    <rect width="400" height="630" rx="16" fill="url(#blueCard)" stroke="#334155" stroke-width="2" />
+    <rect x="0" y="0" width="400" height="48" rx="16" fill="#1e293b" />
+    <rect x="0" y="32" width="400" height="16" fill="#1e293b" />
+    <text x="24" y="30" class="card-title">💻 Windows 11 PC (Controller)</text>
+    <text x="280" y="30" class="badge" fill="#10b981">[Low-End Friendly]</text>
+
+    <!-- PC Item 1: MirrorKing Tunnel Hub -->
+    <g transform="translate(20, 65)">
+      <rect width="360" height="130" rx="10" fill="#0b1329" stroke="#0284c7" stroke-width="1.5" />
+      <text x="16" y="26" class="item-title" fill="#38bdf8">1. MirrorKing Bridge Daemon (server.js)</text>
+      <text x="16" y="44" class="item-desc">Ultralight Node.js daemon (&lt; 15 MB RAM)</text>
+
+      <rect x="16" y="55" width="328" height="30" rx="6" fill="#075985" />
+      <text x="26" y="74" font-family="monospace" font-size="11" fill="#e0f2fe">Exposes local ADB port: 127.0.0.1:7777</text>
+
+      <rect x="16" y="90" width="328" height="30" rx="6" fill="#075985" />
+      <text x="26" y="109" font-family="sans-serif" font-size="11" fill="#e0f2fe">Pipes 7777 directly to phone's 5555 over WAN</text>
+    </g>
+
+    <!-- PC Item 2: Native Scrcpy Client -->
+    <g transform="translate(20, 210)">
+      <rect width="360" height="190" rx="10" fill="#0b1329" stroke="#10b981" stroke-width="2" filter="url(#glow)" />
+      <text x="16" y="26" class="item-title" fill="#34d399">2. Native Scrcpy Desktop Window</text>
+      <text x="16" y="44" class="item-desc">Connected to 127.0.0.1:7777</text>
+
+      <g transform="translate(16, 55)">
+        <rect width="328" height="38" rx="6" fill="#064e3b" />
+        <text x="12" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#a7f3d0">🛡 100% Invisible Mirroring</text>
+        <text x="12" y="32" class="item-desc">No screen-recording popup on Snapchat</text>
+      </g>
+
+      <g transform="translate(16, 98)">
+        <rect width="328" height="38" rx="6" fill="#064e3b" />
+        <text x="12" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#a7f3d0">🎯 Raw Kernel MotionEvents</text>
+        <text x="12" y="32" class="item-desc">Pixel-perfect taps, swipes, and mouse scroll</text>
+      </g>
+
+      <g transform="translate(16, 141)">
+        <rect width="328" height="38" rx="6" fill="#064e3b" />
+        <text x="12" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#a7f3d0">🚀 Ultra-Fast Hardware Decode</text>
+        <text x="12" y="32" class="item-desc">60 FPS smooth video with near-zero latency</text>
+      </g>
+    </g>
+
+    <!-- PC Item 3: Rescue Dashboard -->
+    <g transform="translate(20, 415)">
+      <rect width="360" height="190" rx="10" fill="#0b1329" stroke="#334155" stroke-width="1.5" />
+      <text x="16" y="26" class="item-title" fill="#f8fafc">3. Cracked-Screen Rescue Hub</text>
+      <text x="16" y="44" class="item-desc">When emergency recovery is required</text>
+
+      <text x="16" y="80" font-family="sans-serif" font-size="12" fill="#94a3b8">• 1-Click Launch: <tspan fill="#38bdf8">launch-scrcpy.bat</tspan></text>
+      <text x="16" y="105" font-family="sans-serif" font-size="12" fill="#94a3b8">• Blind PIN Unlock Macro</text>
+      <text x="16" y="130" font-family="sans-serif" font-size="12" fill="#94a3b8">• Hardware Buttons (Power, Volume, Home)</text>
+      <text x="16" y="155" font-family="sans-serif" font-size="12" fill="#94a3b8">• Screen-Off Mirroring (Saves battery &amp; heat)</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(60, 765)">
+    <text x="0" y="0" font-family="sans-serif" font-size="12" fill="#64748b">Generated by MirrorKing Architecture Engine • Saved locally to blueprints/architecture_blueprint.svg</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "name": "mirrorking-relay",
+  "version": "1.0.0",
+  "description": "MirrorKing 4G/5G Cellular WebSocket Relay for Render.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["scrcpy", "android", "cellular", "relay", "mirrorking"],
+  "author": "Secuready",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

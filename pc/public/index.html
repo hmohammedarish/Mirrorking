@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MirrorKing - Universal Android Mirror & Remote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Top Navigation Bar -->
+        <header class="header">
+            <div class="brand">
+                <span class="logo">👑</span>
+                <span class="title">MirrorKing</span>
+                <span class="badge" id="statusBadge">Disconnected</span>
+            </div>
+            <div class="metrics">
+                <span class="metric-item"><strong>FPS:</strong> <span id="fpsMeter">0</span></span>
+                <span class="metric-item"><strong>Bitrate:</strong> <span id="bitrateMeter">0</span> kbps</span>
+                <span class="metric-item"><strong>Mode:</strong> <span id="modeMeter">-</span></span>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <div class="mirror-container" id="mirrorContainer">
+                <canvas id="videoCanvas"></canvas>
+                <div class="connecting-overlay" id="connectingOverlay">
+                    <div class="stealth-card">
+                        <span class="badge-stealth">🛡️ ZERO-ALERT STEALTH ACTIVE</span>
+                        <h2>Native 60 FPS Engine</h2>
+                        <p class="stealth-note">
+                            Android 16 <strong>MediaProjection is suppressed</strong> to prevent <em>"Phone is being monitored"</em> status bar banners, banking app blocks, and Snapchat recording alerts.<br><br>
+                            Click below to open the hardware compositor mirror directly on your desktop:
+                        </p>
+                        <button id="btnLaunchNative" class="btn btn-primary btn-large">
+                            🚀 Launch 60 FPS Native Mirror
+                        </button>
+                        <div class="helper-info">
+                            <span>⚡ Direct3D 11 Hardware Acceleration (15ms latency)</span>
+                            <span>🔒 Zero Status Bar Alerts & Snapchat-Safe</span>
+                            <span>⌨️ Keyboard & Mouse: Alt+O (Stealth Screen Off), Alt+H (Home)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rescue & Control Sidebar -->
+            <aside class="sidebar">
+                <div class="panel-section">
+                    <h3>Display Engine</h3>
+                    <button id="btnLaunchNativeSidebar" class="btn btn-primary btn-large" style="margin-bottom: 0;">
+                        🚀 Open 60 FPS Mirror
+                    </button>
+                </div>
+
+                <div class="panel-section">
+                    <h3>Cracked-Screen Rescue</h3>
+                    <div class="rescue-group">
+                        <label for="pinInput">Unlock with PIN / Password:</label>
+                        <div class="input-row">
+                            <input type="password" id="pinInput" placeholder="Enter PIN" autocomplete="off">
+                            <button id="unlockBtn" class="btn btn-primary">Unlock</button>
+                        </div>
+                    </div>
+                    <div class="rescue-group">
+                        <label for="textInput">Type Text into Phone:</label>
+                        <div class="input-row">
+                            <input type="text" id="textInput" placeholder="Message / URL / Search">
+                            <button id="sendTextBtn" class="btn btn-secondary">Send</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3>Device Controls</h3>
+                    <div class="btn-grid">
+                        <button class="btn btn-control" id="btnBack">◀ Back</button>
+                        <button class="btn btn-control" id="btnHome">● Home</button>
+                        <button class="btn btn-control" id="btnRecents">■ Recents</button>
+                        <button class="btn btn-control" id="btnNotif">▼ Notifications</button>
+                        <button class="btn btn-control" id="btnQuickSet">⚙ Quick Settings</button>
+                        <button class="btn btn-control" id="btnPower">⏻ Lock / Power</button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3>Shortcuts</h3>
+                    <ul class="shortcuts-list">
+                        <li><strong>Click:</strong> Tap screen</li>
+                        <li><strong>Click + Drag:</strong> Swipe / Scroll</li>
+                        <li><strong>Right Click:</strong> Back button</li>
+                        <li><strong>Mouse Wheel:</strong> Scroll up/down</li>
+                        <li><strong>Keyboard:</strong> Direct text typing</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
