@@ -12,7 +12,16 @@ const PUBLIC_DIR = path.join(__dirname, 'public');
 const ADB_PATH = 'e:\\SECUREADY\\tools\\android-sdk\\platform-tools\\adb.exe';
 
 const relayArgIndex = process.argv.indexOf('--relay');
-const RELAY_URL = relayArgIndex !== -1 ? process.argv[relayArgIndex + 1] : process.env.RELAY_URL;
+let RELAY_URL = relayArgIndex !== -1 ? process.argv[relayArgIndex + 1] : process.env.RELAY_URL;
+if (!RELAY_URL) {
+    const renderUrlFile = path.join(__dirname, '..', 'render_url.txt');
+    if (fs.existsSync(renderUrlFile)) {
+        try {
+            const fileContent = fs.readFileSync(renderUrlFile, 'utf8').trim();
+            if (fileContent) RELAY_URL = fileContent;
+        } catch (e) {}
+    }
+}
 
 let activePhoneSocket = null;
 let activeRelayWs = null;
